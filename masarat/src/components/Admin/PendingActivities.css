@@ -1,0 +1,144 @@
+/* Page wrapper */
+.pending-container {
+  padding: 30px;
+  background-color: #f5f7fa;
+  min-height: 100vh;
+}
+
+/* Page title */
+.pending-container h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 20px;
+}
+
+/* Empty message */
+.empty-text {
+  background: #ffffff;
+  padding: 18px;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 14px;
+  color: #6b7280;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+}
+
+/* Grid layout */
+.activities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 18px;
+}
+
+/* Activity card */
+.activity-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 18px;
+  border: 1px solid #e5e7eb;
+  transition: all 0.2s ease;
+}
+
+.activity-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+}
+
+/* Card header */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-header h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #111827;
+}
+
+/* Status badge */
+.status {
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  text-transform: capitalize;
+}
+
+.status.pending {
+  background: #fff4e5;
+  color: #b45309;
+}
+
+/* Details */
+.location {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #374151;
+}
+
+.date {
+  font-size: 13px;
+  color: #6b7280;
+  margin-top: 2px;
+}
+
+/* Info rows */
+.card-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.card-info span {
+  background: #f3f4f6;
+  padding: 5px 9px;
+  border-radius: 6px;
+  font-size: 12px;
+  color: #374151;
+}
+
+/* Actions */
+.card-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.card-actions button {
+  flex: 1;
+  padding: 8px;
+  font-size: 13px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+/* Buttons */
+.card-actions .approve {
+  background-color: #22c55e;
+  color: #ffffff;
+}
+
+.card-actions .approve:hover {
+  background-color: #16a34a;
+}
+
+.card-actions .reject {
+  background-color: #ef4444;
+  color: #ffffff;
+}
+
+.card-actions .reject:hover {
+  background-color: #dc2626;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .pending-container {
+    padding: 20px;
+  }
+}

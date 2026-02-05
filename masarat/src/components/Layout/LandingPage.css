@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Inter", "Segoe UI", Tahoma, sans-serif;
+  background-color: #ffffff;
+  color: #1f2937;
+  line-height: 1.6;
+}
+.landing-page {
+  width: 100%;
+  overflow-x: hidden;
+}
+.hero-premium {
+  min-height: 90vh;
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.45),
+      rgba(0, 0, 0, 0.45)
+    ),
+    url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee")
+      center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+}
+.hero-premium-content {
+  max-width: 850px;
+  text-align: center;
+  color: #ffffff;
+}
+.hero-premium-content h1 {
+  font-size: clamp(2.5rem, 5vw, 3.8rem);
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  margin-bottom: 20px;
+}
+.hero-premium-content p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  max-width: 680px;
+  margin: 0 auto 35px;
+}
+.primary-btn {
+  background-color: #0f766e;
+  color: #ffffff;
+  padding: 14px 36px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.primary-btn:hover {
+  background-color: #115e59;
+  transform: translateY(-2px);
+}
+.trust-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  padding: 90px 10%;
+  background-color: #f9fafb;
+}
+.trust-item h3 {
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+.trust-item p {
+  color: #4b5563;
+  font-size: 0.95rem;
+  max-width: 420px;
+}
+.gallery-premium {
+  padding: 90px 10%;
+  text-align: center;
+}
+.gallery-premium h2 {
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  font-weight: 600;
+}
+.gallery-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+.gallery-image {
+  overflow: hidden;
+  border-radius: 16px;
+}
+.gallery-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+.gallery-image img:hover {
+  transform: scale(1.05);
+}
+.cta-premium {
+  padding: 100px 20px;
+  background-color: #0f766e;
+  color: #ffffff;
+  text-align: center;
+}
+.cta-premium h2 {
+  font-size: 2.4rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+.cta-premium p {
+  max-width: 600px;
+  margin: 0 auto 35px;
+  opacity: 0.95;
+}
+.hero-premium {
+  padding-top: 72px;
+}
+@media (max-width: 768px) {
+  .hero-premium-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .cta-premium h2 {
+    font-size: 2rem;
+  }
+
+  .trust-section {
+    padding: 60px 8%;
+  }
+
+  .gallery-premium {
+    padding: 60px 8%;
+  }
+}

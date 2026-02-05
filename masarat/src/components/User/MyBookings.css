@@ -1,0 +1,34 @@
+.my-bookings {
+  padding: 20px;
+}
+
+.my-bookings h2 {
+  margin-bottom: 20px;
+  color: #374151;
+}
+
+.my-bookings table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.my-bookings th,
+.my-bookings td {
+  padding: 12px 15px;
+  text-align: left;
+  font-size: 14px;
+  color: #374151;
+}
+
+.my-bookings th {
+  background-color: #2563eb;
+  color: #fff;
+}
+
+.my-bookings tr:nth-child(even) {
+  background-color: #f3f4f6;
+}
