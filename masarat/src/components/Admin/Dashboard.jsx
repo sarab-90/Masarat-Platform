@@ -1,4 +1,3 @@
-// AdminDashboard.jsx
 import { useState, useEffect } from "react";
 import api from "../../api";
 import toast from "react-hot-toast";
@@ -49,14 +48,12 @@ function AdminDashboard() {
       <Sidebar isOpen={isSidebarOpen} />
 
       <div className={`admin-content ${isSidebarOpen ? "" : "sidebar-closed"}`}>
-        {/* Top Bar */}
         <div className="top-bar">
           <button className="toggle-btn" onClick={toggleSidebar}>
             {isSidebarOpen ? "☰" : "☰"}
           </button>
         </div>
 
-        {/* Dashboard Stats */}
         <h2>Welcome Admin!</h2>
         <div className="stats-overview">
           <div className="stat-card"><h3>Users</h3><p>{stats.users}</p></div>

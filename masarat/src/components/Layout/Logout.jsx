@@ -8,7 +8,6 @@ function Logout() {
     // مسح بيانات المستخدم
     localStorage.removeItem("User");
 
-    // إعادة التوجيه لصفحة تسجيل الدخول
     navigate("/login");
   }, [navigate]);
 

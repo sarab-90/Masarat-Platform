@@ -1,4 +1,3 @@
-/* Container */
 .categories-container {
   padding: 40px;
   max-width: 1100px;
@@ -7,16 +6,12 @@
   min-height: 100vh;
   font-family: "Inter", sans-serif;
 }
-
-/* Title */
 .categories-container h3 {
   font-size: 26px;
   font-weight: 600;
   margin-bottom: 20px;
   color: #1f2937;
 }
-
-/* Add button */
 .toggle-form-btn {
   background: #2563eb;
   color: #fff;
@@ -32,8 +27,6 @@
 .toggle-form-btn:hover {
   background: #1e40af;
 }
-
-/* Form */
 .category-form {
   background: #ffffff;
   padding: 20px;
@@ -70,8 +63,6 @@
 .category-form button:hover {
   background: #059669;
 }
-
-/* Table */
 .categories-table {
   width: 100%;
   border-collapse: collapse;
@@ -105,16 +96,12 @@
 .categories-table tbody tr:hover {
   background: #f9fafb;
 }
-
-/* Inputs inside table */
 .categories-table input {
   width: 100%;
   padding: 8px 10px;
   border-radius: 6px;
   border: 1px solid #d1d5db;
 }
-
-/* Actions buttons */
 .categories-table td button {
   padding: 6px 12px;
   border-radius: 6px;
@@ -124,8 +111,6 @@
   margin-right: 6px;
   transition: 0.2s;
 }
-
-/* Edit */
 .categories-table td button:nth-child(1) {
   background: #2563eb;
   color: #fff;
@@ -134,8 +119,6 @@
 .categories-table td button:nth-child(1):hover {
   background: #1e40af;
 }
-
-/* Delete */
 .categories-table td button:nth-child(2) {
   background: #ef4444;
   color: #fff;
@@ -144,17 +127,12 @@
 .categories-table td button:nth-child(2):hover {
   background: #dc2626;
 }
-
-/* Save */
 .categories-table td button:first-child {
   background: #10b981;
 }
-
 .categories-table td button:first-child:hover {
   background: #059669;
 }
-
-/* Cancel */
 .categories-table td button:last-child {
   background: #6b7280;
 }

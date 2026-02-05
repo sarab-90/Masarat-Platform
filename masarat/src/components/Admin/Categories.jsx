@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import toast from "react-hot-toast";
 import api from "../../api.js"; 
 import "./Categories.css"; 
@@ -76,7 +76,6 @@ function Categories() {
 
   return (
     <>
-      {/* <Header /> */}
       <div className="categories-container">
         <h3>Manage Categories</h3>
         <button className="toggle-form-btn" onClick={() => setShowForm(!showForm)}>
