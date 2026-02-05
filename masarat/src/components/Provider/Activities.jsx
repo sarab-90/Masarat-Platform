@@ -25,11 +25,12 @@ function Activities() {
   const fetchActivities = async () => {
     try {
       const res = await api.get("/get/Activity"); 
-      if (!res.data.Activity || res.data.Activity.length === 0) {
+      if (!res.data.activities || res.data.activities.length === 0) {
         toast.error("No activities found");
         return;
       }
-      setActivities(res.data.Activity);
+      console.log(res.data.activities);
+      setActivities(prev => [...prev, res.data.Activity]);
     } catch (error) {
       toast.error("Failed to fetch activities");
       console.log(error);
@@ -57,6 +58,7 @@ function Activities() {
           images: "",
         });
         fetchActivities();
+        setActivities(prev => [...prev, res.data.Activity]);
       }
     } catch (error) {
       toast.error(error.response?.data?.message || "Failed to add activity");
@@ -188,9 +190,9 @@ function Activities() {
           <input
             type="text"
             placeholder="Images URL"
-            value={newActivity.images}
+            value={newActivity.images[0] || ""}
             onChange={(e) =>
-              setNewActivity({ ...newActivity, images: e.target.value })
+              setNewActivity({ ...newActivity, images: [e.target.value] })
             }
           />
           <button type="submit">Add Activity</button>
@@ -200,7 +202,7 @@ function Activities() {
       <table>
         <thead>
           <tr>
-            <th>#</th>
+            <th></th>
             <th>Name</th>
             <th>Description</th>
             <th>Location</th>
@@ -328,7 +330,7 @@ function Activities() {
                     a.capacity
                   )}
                 </td>
-                <td>{a.category}</td>
+                <td>{a.category?.name || "No category"}</td>
                 <td>
                   {isEditing ? (
                     <>

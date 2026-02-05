@@ -11,7 +11,7 @@ function ActivitiesList() {
   useEffect(() => {
     const fetchActivities = async () => {
       try {
-        const res = await api.get("/get/activities"); // API لجلب الأنشطة
+        const res = await api.get("/get/Activity"); 
         setActivities(res.data.activities || []);
       } catch (error) {
         toast.error("Failed to load activities");

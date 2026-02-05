@@ -25,13 +25,24 @@ function Login() {
       const { token, user, message } = response.data;
 
       localStorage.setItem("token", token);
-      localStorage.setItem("user", JSON.stringify(user));
+      if (user.role === "admin") {
+      localStorage.setItem("Admin", JSON.stringify(user));
+      localStorage.removeItem("User");
+      localStorage.removeItem("Provider");
+      navigate("/admin/dashboard");
+    } else if (user.role === "provider") {
+      localStorage.setItem("Provider", JSON.stringify(user));
+      localStorage.removeItem("User");
+      localStorage.removeItem("Admin");
+      navigate("/provider/activities"); 
+    } else {
+      localStorage.setItem("User", JSON.stringify(user));
+      localStorage.removeItem("Admin");
+      localStorage.removeItem("Provider");
+      navigate("/user/home");
+    }
 
-      toast.success(message);
-
-      user.role === "admin"
-        ? navigate("/admin/dashboard")
-        : navigate("/user/home");
+    toast.success(message);
     } catch (error) {
       toast.error(error.response?.data?.message || "Login failed");
     }

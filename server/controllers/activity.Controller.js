@@ -95,7 +95,6 @@ export const getAllActivity = async (req, res) => {
     if (req.user.role === "provider") {
       // يرى انشطته
       activities = await Activity.find({ provider: req.user.id });
-    } else {
       //الادمن يرى كل الانشطه
     activities = await Activity.find();
     }

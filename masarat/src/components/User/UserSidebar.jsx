@@ -32,7 +32,7 @@ function UserSidebar({ isOpen }) {
       <div className="sidebar-list">
         <ul>
           <li><button onClick={() => navigate("/user/home")}>Home</button></li>
-          <li><button onClick={() => navigate("/user/activities")}>Activities</button></li>
+          <li><button onClick={() => navigate("/user/activitiesList")}>Activities</button></li>
           <li><button onClick={() => navigate("/user/my-bookings")}>My Bookings</button></li>
         </ul>
         <button className="logout" onClick={handleLogout}>Logout</button>
