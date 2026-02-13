@@ -1,0 +1,88 @@
+/* ================= SIDEBAR ================= */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -260px; /* يبدأ مخفي */
+  width: 260px;
+  height: 100vh;
+  background: linear-gradient(145deg, #eaf4ea, #c7decf);
+  box-shadow: 4px 0 20px rgba(18, 53, 36, 0.15);
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.4s ease;
+  z-index: 999;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+/* يظهر عند الضغط على زر Menu */
+.sidebar.active {
+  left: 0;
+}
+
+/* ================= LOGO ================= */
+.sidebar-logo {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 28px;
+  font-weight: 600;
+  color: #123524;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* ================= LINKS ================= */
+.sidebar-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.sidebar-links li a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 18px;
+  border-radius: 12px;
+  color: #123524;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.sidebar-links li a .icon {
+  font-size: 18px;
+}
+
+.sidebar-links li a:hover {
+  background: linear-gradient(135deg, #e5c26a, #c39a2f);
+  color: #10261c;
+  transform: translateX(5px);
+  box-shadow: 0 5px 15px rgba(180, 140, 40, 0.2);
+}
+
+.sidebar-links li a.active {
+  background: linear-gradient(135deg, #c39a2f, #e5c26a);
+  color: #10261c;
+  font-weight: 600;
+  box-shadow: 0 5px 15px rgba(180, 140, 40, 0.3);
+}
+
+/* ================= RESPONSIVE ================= */
+@media screen and (max-width: 768px) {
+  .sidebar {
+    width: 220px;
+    padding: 35px 15px;
+    border-radius: 0 25px 25px 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .sidebar {
+    width: 200px;
+    padding: 30px 15px;
+  }
+}

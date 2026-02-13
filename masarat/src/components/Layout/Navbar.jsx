@@ -1,29 +1,34 @@
-import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import { NavLink } from "react-router-dom";
+import { FaBars, FaTimes } from "react-icons/fa";
 import "./Navbar.css";
 
 function Navbar() {
-  const navigate = useNavigate();
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="navbar">
-      <div className="navbar-left">
-        <h2 className="logo" onClick={() => navigate("/")}>
-          MASARAT
-        </h2>
-      </div>
+    <header className="navbar">
+      <div className="nav-container">
 
-      <div className="navbar-right">
-        <button className="nav-btn" onClick={() => navigate("/login")}>
-          Login
-        </button>
-        <button
-          className="nav-btn primary"
-          onClick={() => navigate("/register")}
-        >
-          Get Started
-        </button>
+        <div className="logo">Masarat</div>
+
+        <nav className={`nav-links ${isOpen ? "active" : ""}`}>
+          <NavLink to="/" onClick={() => setIsOpen(false)}>Home</NavLink>
+          <NavLink to="/activities" onClick={() => setIsOpen(false)}>Activities</NavLink>
+          <NavLink to="/about" onClick={() => setIsOpen(false)}>About</NavLink>
+          <NavLink to="/contact" onClick={() => setIsOpen(false)}>Contact</NavLink>
+          <NavLink to="/login" className="nav-btn" onClick={() => setIsOpen(false)}>
+            Login
+          </NavLink>
+        </nav>
+
+        <div className="menu-icon" onClick={() => setIsOpen(!isOpen)}>
+          {isOpen ? <FaTimes /> : <FaBars />}
+        </div>
+
       </div>
-    </nav>
+    </header>
   );
 }
+
 export default Navbar;

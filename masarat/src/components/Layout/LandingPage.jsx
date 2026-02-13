@@ -1,93 +1,83 @@
-import { useNavigate } from "react-router-dom";
-import Navbar from "./Navbar.jsx";
-import "./LandingPage.css";
+import "../Layout/LandingPage.css";
 
 function LandingPage() {
-  const navigate = useNavigate();
-
-  const galleryImages = [
-    "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2d/02/61/b1/caption.jpg?w=500&h=500&s=1",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzUHeHCQsLfqkzRyyg80Kps92l3_LnhlN6Ag&s",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmX2MBbki9GzALqgk_m3dyFyJtI0t-chNT1Q&s"
-  ];
-
   return (
-    <div className="landing-page">
-      <Navbar />
+    <div className="landing">
 
-      {/* Hero */}
-      <section className="hero-premium">
-        <div className="hero-premium-content">
-          <h1>
-            One Platform for Exceptional Camping Experiences
-          </h1>
-
+      {/* HERO */}
+      <section className="hero">
+        <div className="hero-overlay">
+          <h1>Discover Luxury in the Wild</h1>
           <p>
-            We connect outdoor enthusiasts with carefully selected camping
-            centers and activities, providing a reliable and seamless booking
-            experience.
+            Experience curated outdoor journeys designed for comfort,
+            adventure, and elegance.
           </p>
-
-          <button
-            className="primary-btn"
-            onClick={() => navigate("/register")}
-          >
-            Get Started
-          </button>
+          <div className="hero-buttons">
+            <button className="primary-btn">Explore Experiences</button>
+            <button className="secondary-btn">Book Your Escape</button>
+          </div>
         </div>
       </section>
 
-      {/* Trust Section */}
-      <section className="trust-section">
-        <div className="trust-item">
-          <h3>Carefully Selected Centers</h3>
-          <p>
-            Each center is reviewed to ensure quality, safety, and authenticity.
-          </p>
-        </div>
-
-        <div className="trust-item">
-          <h3>Transparent Experience</h3>
-          <p>
-            Clear information, real images, and honest descriptions.
-          </p>
-        </div>
-
-        <div className="trust-item">
-          <h3>Simple Booking Process</h3>
-          <p>
-            Designed to save time and eliminate complexity.
-          </p>
-        </div>
-      </section>
-
-      {/* Gallery */}
-      <section className="gallery-premium">
-        <h2>Selected Destinations</h2>
-
-        <div className="gallery-row">
-          {galleryImages.map((img, index) => (
-            <div className="gallery-image" key={index}>
-              <img src={img} alt={`Destination ${index + 1}`} />
+      {/* FEATURED */}
+      <section className="featured">
+        <h2>Featured Experiences</h2>
+        <div className="featured-grid">
+          <div className="card large">
+            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" alt="" />
+            <div className="card-content">
+              <h3>Luxury Desert Camp</h3>
+              <p>From $120</p>
             </div>
-          ))}
+          </div>
+
+          <div className="card">
+            <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470" alt="" />
+            <div className="card-content">
+              <h3>Mountain Escape</h3>
+              <p>From $95</p>
+            </div>
+          </div>
+
+          <div className="card">
+            <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e" alt="" />
+            <div className="card-content">
+              <h3>Forest Retreat</h3>
+              <p>From $110</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* WHY MASARAT */}
+      <section className="why">
+        <h2>Why Masarat</h2>
+        <div className="why-grid">
+          <div className="why-card">
+            <h3>Premium Activities</h3>
+            <p>Carefully curated luxury outdoor experiences.</p>
+          </div>
+          <div className="why-card">
+            <h3>Verified Organizers</h3>
+            <p>Trusted providers with high standards.</p>
+          </div>
+          <div className="why-card">
+            <h3>Exclusive Locations</h3>
+            <p>Handpicked destinations across the region.</p>
+          </div>
+          <div className="why-card">
+            <h3>Safety & Comfort</h3>
+            <p>Top-tier service with maximum comfort.</p>
+          </div>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="cta-premium">
-        <h2>Plan Your Next Outdoor Experience</h2>
-        <p>
-          Join today and explore trusted camping destinations with confidence.
-        </p>
-
-        <button
-          className="primary-btn"
-          onClick={() => navigate("/register")}
-        >
-          Create Your Account
-        </button>
+      <section className="cta">
+        <h2>Your Next Adventure Awaits</h2>
+        <button className="primary-btn">Start Exploring</button>
       </section>
+
     </div>
   );
 }

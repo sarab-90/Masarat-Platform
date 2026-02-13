@@ -13,5 +13,4 @@ function Logout() {
 
   return null; // لا تعرض شيء
 }
-
 export default Logout;

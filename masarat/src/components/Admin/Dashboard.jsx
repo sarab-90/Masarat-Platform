@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import api from "../../api";
 import toast from "react-hot-toast";
-import Sidebar from "./Sidebar.jsx";
+import Sidebar from "../Layout/Sidebar.jsx";
 import "./Dashboard.css";
 
 function AdminDashboard() {
